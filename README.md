@@ -1,9 +1,6 @@
 # RoadDamageDetector
 Projet de deepLearning EISTI ING3
 
-# PROJET DEEPLEARNING : ROAD DAMAGE INSPECTOR
-
-
 Ce projet a été réalisé sous la forme d'un notebook (avec Jupyter lab).
 
 L'objectif de ce project est de construire un modèle de détection de l'état des routes (détection des dommages : fissures, nids de poules, ...).
