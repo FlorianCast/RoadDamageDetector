@@ -1,5 +1,5 @@
-# RoadDamageDetector
-Projet de deepLearning EISTI ING3
+# PROJET DEEPLEARNING : ROAD DAMAGE INSPECTOR
+
 
 Ce projet a été réalisé sous la forme d'un notebook (avec Jupyter lab).
 
@@ -52,6 +52,10 @@ Sixième phase : step = 300 / epoch = 7 / batch_size = 1 / EN COURS
 -------------------------------------------------------------
 
 La suite de ce README sera rédigée demain Dimanche 19 mai.
+
+Pour faire fonctionner le notebook, il est nécessaire de télécharger le dataset __RoadDamageDataset__ ainsi que le dossier Mask_RCNN qui nous était fournit en cours (mais peut être trouvé sur internet) et déplacer le dossier __mrcnn__ dans le dossier courant du notebook. 
+
+De plus, les poids des modèles que j'ai entraîné ne sont pour le moment pas en ligne.
 
 -------------------------------------------------------------
 
