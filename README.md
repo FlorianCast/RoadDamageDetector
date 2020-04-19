@@ -32,7 +32,7 @@ J'ai décidé d'essayer de réaliser ce réseau en utilisant la technique de tra
 ## Phases de test
 Cinq phases de test ont été faîtes: 
 
-Les deux premières step = 140 / epoch = 5 / batch_size = 1 / NON ABOUTIES : 
+Les deux premières : step = 140 / epoch = 5 / batch_size = 1 / NON ABOUTIES : 
 
 - La première à révélé le problème d'annotation, où la classe _D30_ apparaîssait alors qu'elle n'était pas référencée.
 
@@ -47,15 +47,48 @@ Problème d'enregistrement du chkpnt à la fin de la première epoch. Je ne sais
 Cinquième phase : step = 250 / epoch = 6 / batch_size = 1 / 14h de calcul.
 Les détections sont moins bonnes que pour la phase 3. Cela est dû à un mauvais réglage du _detection minimum confidance_. Je l'avais ici réglé à 0.5 au lieu de 0.9. Le modèle a donc appris en partie sur des détections fausses ce qui expliquerait les résultats médiocres.
 
-Sixième phase : step = 300 / epoch = 7 / batch_size = 1 / EN COURS
+Sixième phase : step = 250 / epoch = 7 / batch_size = 1 / 16h de calcul.
+Les résultats sont comparables à la phase 5. Il n'y a pas de réelle amélioration et je trouve cela plutôt bizarre. 
+
+Septième phase : step = 150 / epoch = 5 / batch_size = 1 / EN COURS.
+Le dataset est ici restreint à __Adachi__. Au vu du rapport temps de calcul/précision, je pense qu'il est préférable de restreindre les données à un seul type d'environnement.
 
 -------------------------------------------------------------
 
-La suite de ce README sera rédigée demain Dimanche 19 mai.
+## Installation
 
-Pour faire fonctionner le notebook, il est nécessaire de télécharger le dataset __RoadDamageDataset__ ainsi que le dossier Mask_RCNN qui nous était fournit en cours (mais peut être trouvé sur internet) et déplacer le dossier __mrcnn__ dans le dossier courant du notebook. 
+Il est préférable de faire tourner ce notebook dans un environnement virtuel dédié, car il nécessite des versions spécifiques de keras (2.2.4) et de tensorflow (1.14).
 
-De plus, les poids des modèles que j'ai entraîné ne sont pour le moment pas en ligne.
+Pour installer les librairies : dans un terminal, dans l'environnement virtuel dédié muni de python3, installer les librairies :
+- numpy
+- matplotlib 
+
+Ensuite, se rendre dans le dossier du projet contenant _req.txt_ et lancer la commande _pip3 install -r req.txt_ (ou remplacer _pip3_ par _pip_ en cas de bug)
+
+
+
+Pour faire fonctionner le notebook, il est nécessaire de télécharger le dataset __RoadDamageDataset__ ainsi que le dossier Mask_RCNN qui nous était fournit en cours (mais peut être trouvé sur internet).
+
+Il faut alors déplacer le dossier __/Mask RCNN/mrcnn__ dans le dossier courant du notebook, et extraire est placer le dataset dans le dossier courant également. 
+
+RoadInspector/
+		
+		model.ipynb
+
+		RoadDamageDataset/
+
+		Mask_RCNN/
+
+		mrcnn/
+
+		(d'autres fichiers)
+
+De plus, les poids des modèles que j'ai entraîné sont à placer dans __/trainedModels__. Ils ne sont pour le moment pas en ligne.
+
+
+## Utilisation
+
+L'intégralité du processus est contenu dans le notebook __model.ipynb__. 
 
 -------------------------------------------------------------
 
